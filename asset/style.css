@@ -4,6 +4,10 @@
     box-sizing: border-box;                           
     scroll-behavior: smooth;
 }
+:root {
+    --color1 : rgb(128, 108, 0);
+    --color2 : rgb(255, 255, 255);
+}
 header {
     background-color:#01210b80;
     width: 100%;
@@ -16,17 +20,17 @@ header {
 }
 .logo {
     text-decoration: none;
-    color:#fdc89c;
+    color: var(--color1);
     font-weight: 600;
     font-size: 2em;
 }
 .logo:hover  {
-    color: rgb(255, 255, 1);
+    color: #FFD700;
 }
 nav a {
     color: #000000;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 500;
     padding-left: 30px;
 }
@@ -59,7 +63,7 @@ width: 70%;
 }
 .main span {
     display: inline-block; /*to cotrole the margin */
-    color: gold;
+    color: var(--color1);
     font-size: 2.5em;
     margin-top: 10px;
     font-weight: 600;
@@ -72,10 +76,10 @@ width: 70%;
     margin-bottom: 30px;
 }
 .resume {
-    color: rgb(255, 217, 0);
+    color: #FFD700;
     background-color: #416a2e;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: 600;
     display: inline-block;
     padding: 1em 3em;
@@ -87,15 +91,19 @@ width: 70%;
 .resume:hover {
     background-color: #6edc3b;
     transform: scale(1.1);
+    color: var(--color1);
 }
 
 .title {
     text-align: center;
-    color: rgb(223, 204, 92);
+    color: var(--color1);   
     font-size: 4em;
     font-weight: 800;
-    margin-bottom:1em ;
-    padding-top: 5%;
+    margin-bottom:.5em ;
+    padding-top: 3%;
+}
+.fa-bullseye-arrow {
+    font-size:4em;
 }
 .contant {
     display: flex;
@@ -105,36 +113,78 @@ width: 70%;
 }
 .card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 23em;
-    background-color: #b8c9bb;
+    background-color: rgb(184, 201, 187);
     box-shadow: 0 5px 25px rgba(1, 33, 11, .5);
     border-radius: 10px;
-    padding-left: auto;
-    padding-right: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-left: 1fr;
+    padding-right: 1fr;
+    padding-top: 2%;
+    padding-bottom: 2%;
     margin: 1%;
     transition: .7s;
+    max-height: 30em;
+    overflow:hidden;
 }
 .card:hover {
     transform: scale(1.1);
+    opacity: 0.8;
+    color: var(--color2);
 }
-.info {
+/* .card-img img:hover {
+    filter: blur(4px);
+    transition: .7s;
+} */
+.card-img img {
+    width: 90%;
+    height: 20em;
+    margin-left:5%;
+    border-radius:10px ;
+}
+/* #orange {
+    border-radius: 50%;
+} */
+.small img{
+    height: 15em;
+}
+.info p, .info div {
     text-align: center;
-    color: rgb(141, 133, 84);
+    color: var(--color1);
     font-size: 1.2em;
 }
 .info h3 {
-    color: rgb(127, 113, 37);
+    color: var(--color1);
     font-size: 1.8em;
     font-weight: 700;
-    margin: 10%;
+    margin: 5%;
+    text-align: center;
+}
+.date {
+    display: flex;
+    justify-content: space-between;
+    color: #363322;
+}
+.date-just {
+    justify-content: space-evenly;
+}
+.show-more {
+    text-decoration: none;
+    color: #80794f;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: 2%;
+}
+.show-more:hover {
+    background-color: #416a2e;
+    color: white;
+    transition: .5s;
 }
 .edu-card {
     display: flex;
     flex-direction: column;
-    background-color: #b8c9bb;
+    background-color: rgb(184, 201, 187);
     border: 1px solid rgb(168, 212, 154);
     min-height: 25em;
     width: 23em;
@@ -154,28 +204,32 @@ width: 70%;
     margin-left: 15%;
 }
 .footer {
-    background-color: rgba(1, 33, 11, .5);
+    background-color: rgba(1, 33, 11, 0.61);
     color: gold;
     padding: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center ;  
-    justify-content: center; 
+    justify-content:space-between; 
+    padding-right: 3em;
+    padding-left: 3em;
 }
 .footer-title {
     font-size: 1.3em;
-    font-weight: 600;
-}
-.text-center {
-    text-align: center;
+    font-weight: 400;
 }
 .footer-title span {
     color: gold;
+    text-align: center;
 }
-.footer .social-icons .fa-brands {
+.fa-brands , .fa-phone , .fa-envelope{
     font-size: 1.8em;
     color: rgb(222, 222, 222);
-    padding-left: 5%;
+    padding-left: 1em;
+    transition: 1s;
+}
+i:hover {
+    transform: scale(1.5);
 }
 #experience {
     margin-bottom: 20px;
@@ -183,7 +237,6 @@ width: 70%;
 .orange-img {
     margin-top: 20%;
 }
-
 
 
 
